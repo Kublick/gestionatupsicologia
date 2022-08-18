@@ -1,10 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}'],
+	content: [
+		'./src/pages/**/*.{js,jsx,ts,tsx}',
+		'./src/components/**/*.{js,jsx,ts,tsx}',
+	],
 	theme: {
 		extend: {
 			colors: {
-				experto1bg: '#6E172F',
+				experto1: '#6E172F',
 				whatsapp: '#35B624',
 				greenbutton: 'rgb(131, 201, 45)',
 				secondary: '#fbb923',

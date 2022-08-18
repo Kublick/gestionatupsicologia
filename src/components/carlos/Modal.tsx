@@ -1,16 +1,15 @@
 import { FC, Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import React from 'react';
-import { FormularioCarlos } from './FormularioCarlos';
-
-// import Confetti from 'react-confetti';
+import FormularioCarlos from './FormularioCarlos';
+import Confetti from 'react-confetti';
 
 type Props = {
 	isOpen: boolean;
 	setIsOpen: (isOpen: boolean) => void;
 };
 
-export function FormularioModal({ isOpen, setIsOpen }): FC<Props> {
+const FormularioModal: FC<Props> = ({ isOpen, setIsOpen }) => {
 	const [party, setParty] = useState(false);
 
 	function closeModal() {
@@ -64,11 +63,11 @@ export function FormularioModal({ isOpen, setIsOpen }): FC<Props> {
 											Registrate al webinar
 										</p>
 									</Dialog.Title>
-									{/* <Confetti
+									<Confetti
 										numberOfPieces={party ? 300 : 0}
 										width={450}
 										height={400}
-									/> */}
+									/>
 
 									<FormularioCarlos
 										closeModal={closeModal}
@@ -82,6 +81,6 @@ export function FormularioModal({ isOpen, setIsOpen }): FC<Props> {
 			</Transition>
 		</>
 	);
-}
+};
 
 export default FormularioModal;
