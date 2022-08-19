@@ -1,22 +1,17 @@
-import * as React from 'react';
-import { HeadFC, Link, navigate } from 'gatsby';
-import { SEO } from '../components/seo';
+import * as React from "react";
+import { HeadFC } from "gatsby";
+import { SEO } from "../components/seo";
 
 const IndexPage = () => {
-	React.useEffect(() => {
-		navigate('/carloscasas');
-	}, []);
-
-	return (
-		<main>
-			<h1 className="text-2xl text-red-600 text-center">Proximamente</h1>
-		</main>
-	);
+  return (
+    <main className="flex h-screen items-center justify-center">
+      <h1 className="bg-gradient-to-r from-purple-400 via-blue-600 to-pink-600 bg-clip-text text-8xl font-extrabold text-transparent">
+        Proximamente
+      </h1>
+    </main>
+  );
 };
 
 export default IndexPage;
 
-export const Head: HeadFC = () => (
-	<SEO />
-	// <SEO title={'Gestiona tu Psicologia'} description={'Mi descripcion'} />
-);
+export const Head: HeadFC = () => <SEO title={"Gestiona tu Psicologia"} />;
