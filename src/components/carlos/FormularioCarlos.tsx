@@ -1,4 +1,3 @@
-import { navigate } from "gatsby";
 import React, { useState } from "react";
 import { FC } from "react";
 import { z } from "zod";
@@ -55,9 +54,6 @@ const FormularioCarlos: FC<Props> = ({ closeModal, setParty }) => {
     })
       .then((response) => {
         if (response.status === 200) {
-          setTimeout(() => {
-            navigate("/carloscasas/gracias");
-          }, 2000);
         }
       })
       .catch((error) => {
@@ -65,7 +61,7 @@ const FormularioCarlos: FC<Props> = ({ closeModal, setParty }) => {
       });
 
     setTimeout(() => {
-      navigate("/carloscasas/gracias");
+      location.assign("/carloscasas/gracias");
       setParty(false);
       closeModal();
     }, 3000);
