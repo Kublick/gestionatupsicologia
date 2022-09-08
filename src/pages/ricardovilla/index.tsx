@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { HeadFC } from "gatsby";
 import { SEO } from "../../components/seo";
 import { StaticImage } from "gatsby-plugin-image";
-import FormularioModal from "../../components/carlos/Modal";
-import {
-  carlosEventoData,
-  carlosPuntosData,
-} from "../../components/carlos/CarlosData";
 import FormularioModalRicardo from "../../components/ricardo/ModalRicardo";
+import {
+  ricardoEventoData,
+  ricardoPuntosData,
+} from "../../components/ricardo/ricardoData";
 
 const CarlosCasasPage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -73,11 +72,11 @@ const CarlosCasasPage = () => {
                   className="w-16 h-16"
                 />
                 <div>
-                  <h3 className="font-semibold">
-                    Anfritrión: Psicólogo Carlos Casas
-                  </h3>
+                  <h3 className="font-semibold">Anfritrión: Ricardo Villa</h3>
 
-                  <p className="font-semibold text-secondary">Psicoterapeuta</p>
+                  <p className="font-semibold text-secondary">
+                    Ingeniero Empresarial
+                  </p>
                 </div>
               </div>
             </div>
@@ -91,7 +90,7 @@ const CarlosCasasPage = () => {
           </h3>
         </div>
         <div className="grid mx-12 md:my-12 md:grid-cols-3 md:gap-16 lg:mx-24">
-          {carlosEventoData.map((evento) => (
+          {ricardoEventoData.map((evento) => (
             <div key={evento.id}>
               <h4 className="text-xl font-semibold">{evento.title}</h4>
               <div className="h-3 my-2 bg-gradient-to-r from-secondary to-white" />
@@ -106,7 +105,7 @@ const CarlosCasasPage = () => {
           <h1 className="text-4xl font bold">Este evento es para ti si:</h1>
         </div>
         <div>
-          {carlosPuntosData.map((puntos) => (
+          {ricardoPuntosData.map((puntos) => (
             <div key={puntos.id} className="mx-4 mt-4">
               <div className="flex items-center gap-4">
                 <span className="flex-shrink-0 w-4 h-4 ml-2 bg-gradient-to-b from-experto2 to-secondary md:ml-0" />
