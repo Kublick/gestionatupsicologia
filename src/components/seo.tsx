@@ -1,35 +1,39 @@
-import React, { FC } from 'react';
-import useSiteMetadata from '../hooks/usesitemetadata';
+import React, { FC } from "react";
+import useSiteMetadata from "../hooks/usesitemetadata";
 
 type SEOProps = {
-	title?: string;
-	description?: string;
-	pathname?: string;
-	children?: React.ReactNode;
+  title?: string;
+  description?: string;
+  pathname?: string;
+  children?: React.ReactNode;
 };
 
 export const SEO: FC<SEOProps> = ({
-	title,
-	description,
-	pathname,
-	children,
+  title,
+  description,
+  pathname,
+  children,
 }) => {
-	const {
-		title: defaultTitle,
-		description: defaultDescription,
-		siteUrl,
-	} = useSiteMetadata();
-	const seo = {
-		title: title || defaultTitle,
-		description: description || defaultDescription,
-		url: `${siteUrl}${pathname || ``}`,
-	};
-	return (
-		<>
-			<title>{seo.title}</title>
-			<meta name="description" content={seo.description} />
-			<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-			{children}
-		</>
-	);
+  const {
+    title: defaultTitle,
+    description: defaultDescription,
+    siteUrl,
+  } = useSiteMetadata();
+  const seo = {
+    title: title || defaultTitle,
+    description: description || defaultDescription,
+    url: `${siteUrl}${pathname || ``}`,
+  };
+  return (
+    <>
+      <title>{seo.title}</title>
+      <meta name="description" content={seo.description} />
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <meta
+        name="facebook-domain-verification"
+        content="v8eujpu7fe4rqvvc2crsk6g6bsueiu"
+      />
+      {children}
+    </>
+  );
 };

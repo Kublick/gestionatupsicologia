@@ -118,7 +118,7 @@ export const carlosContenido = [
   {
     id: 3,
     title:
-      "APP MOVILE para que puedas ver las clases del curso desde tu celular, descargarlas y poderlas ver sin internet (valorado en $50)",
+      "APP MOVIL para que puedas ver las clases del curso desde tu celular, descargarlas y poderlas ver sin internet (valorado en $50)",
   },
   {
     id: 4,

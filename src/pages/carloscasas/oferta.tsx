@@ -93,9 +93,14 @@ const VentaCarlosCasas = () => {
                 Psicólogo Clínico Carlos Casas
               </p>
               <p className="mx-4 text-xl md:mx-12 md:text-2xl ">
-                Maestría En Psicoterapia Ericksoniana.
-                <br /> Especialista En Terapia Breve Y De Pareja Por Parte Del
-                Mental Research Institute Palo Alto California.
+                Psicoterapeuta clínico con nueve años de experiencia en el área
+                de la salud mental, enfocado en las áreas de ansiedad, depresión
+                y suicidio, con cinco años de experiencia en el área de la
+                docencia a nivel de preparatoria, licenciatura y maestría, en
+                escuelas como CETYS, UVM, XOCHICALCO, Centro Ericksoniano de
+                México, Universidad Autónoma de Durango y UNEA. Actualmente soy
+                Codirector del Instituto de psicoterapia breve y desarrollo
+                personal. HIPNOSIC.
               </p>
             </div>
             <div className="order-first md:order-last">
