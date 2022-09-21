@@ -1,5 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
+import ReactPlayer from "react-player/lazy";
 import { Counter } from "../../components/Counter";
 import CTARicardo from "../../components/ricardo/CTARicardo";
 import {
@@ -46,7 +47,7 @@ const OfertaCarlos = () => {
         <div className="px-4 md:px-12">
           {ricardoOferta.map((puntos) => (
             <div key={puntos.id} className="mx-4 mt-4">
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 md:text-xl">
                 <span className="flex-shrink-0 w-4 h-4 ml-2 bg-gradient-to-b from-experto2 to-secondary md:ml-0" />
                 <p>{puntos.description}</p>
               </div>
@@ -77,8 +78,8 @@ const OfertaCarlos = () => {
           <p className="px-4 mt-12 mb-4 text-lg font-semibold text-center md:mx-8 md:text-2xl">
             El precio regular de este curso online es de{" "}
             <span className="text-secondary">$197 dólares</span> pero al
-            inscribirte a la primera generación de ACTIVA TU CONSULTA PRIVADA,
-            recibes un{" "}
+            inscribirte a la primera generación de ADMINISTRACION EFECTIVA DE
+            NEGOCIOS, recibes un{" "}
             <span className="text-secondary">descuento de $100 dólares,</span>{" "}
             por lo que tu inversión seria solo de
           </p>
@@ -115,11 +116,11 @@ const OfertaCarlos = () => {
                 </li>
               </ul>
             </div>
-            <div className="order-first md:order-last">
+            <div className="flex justify-center order-first md:order-last">
               <StaticImage
                 src={"../../images/ricardo/ricardo_villa_oferta.png"}
                 alt="Ricardo Villa"
-                className="w-3/4"
+                className="w-3/4 "
               />
             </div>
           </div>
@@ -138,7 +139,7 @@ const OfertaCarlos = () => {
                 a incrementar su número de pacientes.
               </p>
             </div>
-            <div className="order-first md:order-last">
+            <div className="flex justify-center order-first md:order-last">
               <StaticImage
                 src={"../../images/berenice_portrait_venta.png"}
                 alt="Berenice Bastidas"
@@ -153,7 +154,7 @@ const OfertaCarlos = () => {
             <div className="grid gap-12 px-4 mx-auto md:grid-cols-4 md:px-12">
               {ricardoPrograma.map((o) => (
                 <div key={o.id}>
-                  <p className="h-24 pb-2 text-lg font-semibold text-center">
+                  <p className="pb-2 text-lg font-semibold text-center sm:h-36 md:h-24">
                     {o.title}
                   </p>
                   <div className="w-full h-4 bg-gradient-to-r from-secondary to-white" />
@@ -171,27 +172,25 @@ const OfertaCarlos = () => {
               acción.
             </p>
 
-            {/* <div className="grid gap-6 text-center md:grid-cols-3">
-              <div>
-                <p className="py-4">Image Art</p>
+            <div className="flex flex-col gap-4 mt-4 md:mt-8 md:grid md:grid-cols-2 md:gap-8">
+              <div className="player-wrapper">
+                <ReactPlayer
+                  url="https://youtu.be/aKZRhqgVqBY"
+                  className="react-player"
+                  width="100%"
+                  height="100%"
+                />
               </div>
 
-              <div>
-                <StaticImage
-                  src={"../../images/ricardo/ilovetj.png"}
-                  alt={""}
+              <div className="player-wrapper">
+                <ReactPlayer
+                  url="https://youtu.be/2CqSqfrR0d8"
+                  className="react-player"
+                  width="100%"
+                  height="100%"
                 />
-                <p className="py-4">I LOVE 664</p>
               </div>
-
-              <div>
-                <StaticImage
-                  src={"../../images/ricardo/expohablemos.png"}
-                  alt={""}
-                />
-                <p className="py-4">EXPO HABLEMOS DE ESTILO</p>
-              </div>
-            </div> */}
+            </div>
           </div>
           <div>
             <h1 className="text-2xl text-center md:text-4xl">
@@ -200,7 +199,7 @@ const OfertaCarlos = () => {
             </h1>
             <div className="flex justify-center my-8 text-2xl ">
               <span className="px-8 py-2 font-bold text-red-500 bg-black rounded-lg">
-                <Counter date={new Date("October 2 2022 23:59")} />
+                <Counter date={new Date("September 25 2022 23:59")} />
               </span>
             </div>
             <p className="py-4 text-2xl font-semibold text-center md:text-7xl">
@@ -273,13 +272,13 @@ const OfertaCarlos = () => {
           <div className="py-8">
             <h1 className="mx-4 text-lg md:mx-12 md:text-2xl">
               Sin duda es muchísimo valor el que tendrás con el curso completo
-              ACTIVA TU CONSULTA PRIVADA y además con los bonos de regalo tienes
-              acceso a más de{" "}
+              ADMINISTRACION EFECTIVA DE NEGOCIOS y además con los bonos de
+              regalo tienes acceso a más de{" "}
               <span className="text-secondary">$1,000 dólares</span> en
               contenido de valor y recursos. Si pagaras todo esto por separado
               te saldría en eso... Pero hoy tengo una invitación, es una oferta
               especial para ti, hoy si te inscribes a la primera generación de
-              ACTIVA TU CONSULTA PRIVADA, recibes un descuento de{" "}
+              ADMINISTRACION EFECTIVA DE NEGOCIOS, recibes un descuento de{" "}
               <span className="text-secondary">$100 dólares,</span> por lo que
               tu inversión seria solo{" "}
               <span className="text-secondary">$97 dólares</span> de el tipo de
@@ -300,7 +299,7 @@ const OfertaCarlos = () => {
                 className="px-12 py-4 text-2xl font-semibold tracking-wide text-white rounded-lg shadow-lg cursor-pointer bg-greenbutton hover:bg-lime-600"
                 onClick={handleCheckout}
               >
-                Da click aquí para ser parte ACTIVA TU CONSULTA
+                Da click aquí para ser parte ADMINISTRACION EFECTIVA DE NEGOCIOS
               </button>
             </div>
           </div>
@@ -340,13 +339,13 @@ const OfertaCarlos = () => {
           <div className="py-8">
             <h1 className="mx-4 text-lg md:mx-12 md:text-2xl">
               Sin duda es muchísimo valor el que tendrás con el curso completo
-              ACTIVA TU CONSULTA PRIVADA y además con los bonos de regalo tienes
-              acceso a más de{" "}
+              ADMINISTRACION EFECTIVA DE NEGOCIOS y además con los bonos de
+              regalo tienes acceso a más de{" "}
               <span className="text-secondary">$1,000 dólares</span> en
               contenido de valor y recursos. Si pagaras todo esto por separado
               te saldría en eso... Pero hoy tengo una invitación, es una oferta
               especial para ti, hoy si te inscribes a la primera generación de
-              ACTIVA TU CONSULTA PRIVADA, recibes un descuento de{" "}
+              ADMINISTRACION EFECTIVA DE NEGOCIOS, recibes un descuento de{" "}
               <span className="text-secondary">$100 dólares,</span> por lo que
               tu inversión seria solo{" "}
               <span className="text-secondary">$97 dólares</span> de el tipo de

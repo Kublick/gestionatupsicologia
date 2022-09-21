@@ -151,7 +151,7 @@ const VentaCarlosCasas = () => {
         </div>
         <div className="flex justify-center my-8 text-2xl ">
           <span className="px-8 py-2 font-bold text-red-500 bg-black rounded-lg">
-            <Counter date={new Date("October 2 2022 23:59")} />
+            <Counter date={new Date("October 1 2022 23:59")} />
           </span>
         </div>
         <CTACarlos handleCheckout={handleCheckout} />
