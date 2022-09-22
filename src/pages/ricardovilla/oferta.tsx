@@ -1,3 +1,4 @@
+import { HeadFC } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import ReactPlayer from "react-player/lazy";
@@ -10,6 +11,7 @@ import {
   ricardoContenido,
   ricardoModulos,
 } from "../../components/ricardo/ricardoData";
+import { SEO } from "../../components/seo";
 
 const OfertaCarlos = () => {
   const handleCheckout = () => {
@@ -366,3 +368,6 @@ const OfertaCarlos = () => {
 };
 
 export default OfertaCarlos;
+export const Head: HeadFC = () => (
+  <SEO title="Ricardo Villa | Oferta Mejora tu Emprendimiento" />
+);
