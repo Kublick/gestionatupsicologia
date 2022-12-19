@@ -1,192 +1,192 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
 const sesions = [
-	{
-		id: 1,
-		content: '5 sesiones individuales de terapia.',
-	},
-	{
-		id: 2,
-		content: 'Acompañamiento de mensajería durante el proceso.',
-	},
-	{
-		id: 3,
-		content: 'Una llamada de emergencia de 15 minutos.',
-	},
-	{
-		id: 4,
-		content: 'Ticket VIP para taller online',
-	},
-	{
-		id: 5,
-		content: 'Membresía en comunidad de exitosos',
-	},
+  {
+    id: 1,
+    content: "5 sesiones individuales de terapia.",
+  },
+  {
+    id: 2,
+    content: "Acompañamiento de mensajería durante el proceso.",
+  },
+  {
+    id: 3,
+    content: "Una llamada de emergencia de 15 minutos.",
+  },
+  {
+    id: 4,
+    content: "Ticket VIP para taller online",
+  },
+  {
+    id: 5,
+    content: "Membresía en comunidad de exitosos",
+  },
 ];
 ---
 
 <script>
-	document.getElementById('plan1')?.addEventListener('click', () => {
-		console.log('click');
-		window.open('https://buy.stripe.com/9AQ5mxa0zcfBcWQ003', '_blank');
-	});
+  document.getElementById("plan1")?.addEventListener("click", () => {
+    console.log("click");
+    window.open("https://buy.stripe.com/9AQ5mxa0zcfBcWQ003", "_blank");
+  });
 
-	document.getElementById('plan2')?.addEventListener('click', () => {
-		console.log('click');
-		window.open('https://buy.stripe.com/4gwbKVgoX0wTcWQeUY', '_blank');
-	});
+  document.getElementById("plan2")?.addEventListener("click", () => {
+    console.log("click");
+    window.open("https://buy.stripe.com/4gwbKVgoX0wTcWQeUY", "_blank");
+  });
 </script>
 
 <Layout title="Terapia Psícologica">
-	<main class="min-h-screen">
-		<div class="p4 px-4 md:px-24 bg-[#deabed]">
-			<div class="text-center font-raleway text-[rgba(20,1,6,.94)] uppercase">
-				<h1 class="text-4xl">Berenice Bastidas</h1>
-				<h1 class="text-4xl">Psicoterapeuta</h1>
-			</div>
-			<div class="my-8">
-				<div class="grid md:grid-cols-3 gap-4 items-center">
-					<div>
-						<h2 class="text-[#252D83] text-2xl font-raleway font-semibold mb-2">
-							terapia psícologica
-						</h2>
-						<p class="mb-4">
-							La terapia psicológica en línea o presencial es un espacio para ti
-							seguro y confiable donde puedes compartir tus pensamientos,
-							emociones, sentimientos, situaciones o problemas. Con el
-							acompañamiento terapéutico asimilaras y/o entenderás las
-							situaciones por las que estas pasando además iras encontrando
-							alternativas favorables para ti, que te irán permitiendo a medida
-							que avanzas en las sesiones de terapia solucionando tu situación
-							día día.
-						</p>
-						<p class="mb-4 font-semibold">¿La terapia es para los locos?</p>
-						<p>
-							La terapia psicología se recomienda para personas que están
-							pasando por una o varias situaciones que perciben como negativas,
-							que ya intentaron quizás hasta resolverla ellos mismos una y otra
-							vez sin obtener éxito, las personas que toman terapia tienen la
-							sensatez consciente o inconsciente de acudir a un profesional para
-							pedir ayudar.
-						</p>
-					</div>
+  <main class="min-h-screen">
+    <div class="p4 px-4 md:px-24 bg-[#deabed]">
+      <div class="text-center font-raleway text-[rgba(20,1,6,.94)] uppercase">
+        <h1 class="text-4xl">Berenice Bastidas</h1>
+        <h1 class="text-4xl">Psícologa</h1>
+      </div>
+      <div class="my-8">
+        <div class="grid md:grid-cols-3 gap-4 items-center">
+          <div>
+            <h2 class="text-[#252D83] text-2xl font-raleway font-semibold mb-2">
+              terapia psícologica
+            </h2>
+            <p class="mb-4">
+              La terapia psicológica en línea o presencial es un espacio para ti
+              seguro y confiable donde puedes compartir tus pensamientos,
+              emociones, sentimientos, situaciones o problemas. Con el
+              acompañamiento terapéutico asimilaras y/o entenderás las
+              situaciones por las que estas pasando además iras encontrando
+              alternativas favorables para ti, que te irán permitiendo a medida
+              que avanzas en las sesiones de terapia solucionando tu situación
+              día día.
+            </p>
+            <p class="mb-4 font-semibold">¿La terapia es para los locos?</p>
+            <p>
+              La terapia psicología se recomienda para personas que están
+              pasando por una o varias situaciones que perciben como negativas,
+              que ya intentaron quizás hasta resolverla ellos mismos una y otra
+              vez sin obtener éxito, las personas que toman terapia tienen la
+              sensatez consciente o inconsciente de acudir a un profesional para
+              pedir ayudar.
+            </p>
+          </div>
 
-					<div class="hidden md:col-span-2 md:block place-self-center">
-						<img
-							src="landing_berenice_left.png"
-							alt="imagen bere"
-							height="520"
-							width="613"
-							class="w-full"
-						/>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="bg-[#84beeb] py-24 px-4 md:px-24">
-			<h2 class="text-2xl font-raleway font-semibold mb-4">Planes</h2>
-			<p>A continuación, te presento los planes terapéuticos de inversión</p>
-			<div class="flex gap-8 py-8 flex-wrap">
-				<div
-					class="bg-white p-6 rounded-3 border-2 border-gray-400 shadow-blueGray w-128 mx-auto"
-				>
-					<h2
-						class="rgba(0,4,15,.97) text-center font-raleway text-xl font-semibold py-4"
-					>
-						Gestiona Tu Psicología (Plan Lite)
-					</h2>
+          <div class="hidden md:col-span-2 md:block place-self-center">
+            <img
+              src="landing_berenice_left.png"
+              alt="imagen bere"
+              height="520"
+              width="613"
+              class="w-full"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-[#84beeb] py-24 px-4 md:px-24">
+      <h2 class="text-2xl font-raleway font-semibold mb-4">Planes</h2>
+      <p>A continuación, te presento los planes terapéuticos de inversión</p>
+      <div class="flex gap-8 py-8 flex-wrap">
+        <div
+          class="bg-white p-6 rounded-3 border-2 border-gray-400 shadow-blueGray w-128 mx-auto"
+        >
+          <h2
+            class="rgba(0,4,15,.97) text-center font-raleway text-xl font-semibold py-4"
+          >
+            Gestiona Tu Psicología (Plan Lite)
+          </h2>
 
-					<p class="font-raleway font-bold text-xl text-center">$47 dólares</p>
-					<div class="flex justify-center">
-						<button
-							id="plan1"
-							class="text-xl border-slate-800 border-2 rounded-2 p-4 my-8 hover:bg-slate-800 hover:text-white"
-							>Elegir Plan</button
-						>
-					</div>
+          <p class="font-raleway font-bold text-xl text-center">$47 dólares</p>
+          <div class="flex justify-center">
+            <button
+              id="plan1"
+              class="text-xl border-slate-800 border-2 rounded-2 p-4 my-8 hover:bg-slate-800 hover:text-white"
+              >Elegir Plan</button
+            >
+          </div>
 
-					<p class="text-lg font-raleway">Incluye</p>
+          <p class="text-lg font-raleway">Incluye</p>
 
-					<ul>
-						<li class="font-raleway text-base flex gap-2 items-center">
-							<span>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor"
-									class="w-6 h-6"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"
-									></path>
-								</svg>
-							</span>
-							Una sesión individual de terapia.
-						</li>
-					</ul>
-				</div>
+          <ul>
+            <li class="font-raleway text-base flex gap-2 items-center">
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"
+                  ></path>
+                </svg>
+              </span>
+              Una sesión individual de terapia.
+            </li>
+          </ul>
+        </div>
 
-				<div
-					class="bg-white p-6 rounded-3 border-2 border-gray-400 shadow-blueGray w-128 mx-auto"
-				>
-					<h2
-						class="rgba(0,4,15,.97) text-center font-raleway text-xl font-semibold py-4"
-					>
-						Gestiona Tu Psicología (Plan Plus)
-					</h2>
+        <div
+          class="bg-white p-6 rounded-3 border-2 border-gray-400 shadow-blueGray w-128 mx-auto"
+        >
+          <h2
+            class="rgba(0,4,15,.97) text-center font-raleway text-xl font-semibold py-4"
+          >
+            Gestiona Tu Psicología (Plan Plus)
+          </h2>
 
-					<p class="font-raleway font-bold text-xl text-center">$197 dólares</p>
-					<div class="flex justify-center">
-						<button
-							id="plan2"
-							class="text-xl bg-slate-800 rounded-2 p-4 my-8 text-white hover:bg-slate-700 hover:shadow-lg"
-							>Elegir Plan</button
-						>
-					</div>
+          <p class="font-raleway font-bold text-xl text-center">$197 dólares</p>
+          <div class="flex justify-center">
+            <button
+              id="plan2"
+              class="text-xl bg-slate-800 rounded-2 p-4 my-8 text-white hover:bg-slate-700 hover:shadow-lg"
+              >Elegir Plan</button
+            >
+          </div>
 
-					<p class="text-lg font-raleway">Incluye</p>
+          <p class="text-lg font-raleway">Incluye</p>
 
-					<ul>
-						{
-							sesions.map((sesion) => (
-								<li class="font-raleway text-base flex gap-2 items-center my-1">
-									<span>
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											fill="none"
-											viewBox="0 0 24 24"
-											stroke-width="1.5"
-											stroke="currentColor"
-											class="w-6 h-6"
-										>
-											<path
-												stroke-linecap="round"
-												stroke-linejoin="round"
-												d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"
-											/>
-										</svg>
-									</span>
-									{sesion.content}
-								</li>
-							))
-						}
-					</ul>
-				</div>
-			</div>
-			<p class="font-raleway font-semibold underline">
-				PROMOCION ESTE MES TODOS LOS PLANES ESTAN AL 2 x 1
-			</p>
-		</div>
-	</main>
+          <ul>
+            {
+              sesions.map((sesion) => (
+                <li class="font-raleway text-base flex gap-2 items-center my-1">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"
+                      />
+                    </svg>
+                  </span>
+                  {sesion.content}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+      <p class="font-raleway font-semibold underline">
+        PROMOCION ESTE MES TODOS LOS PLANES ESTAN AL 2 x 1
+      </p>
+    </div>
+  </main>
 </Layout>
 
 <style>
-	p {
-		font-family: 'Sorts Mill Goudy';
-		font-size: 17px;
-	}
+  p {
+    font-family: "Sorts Mill Goudy";
+    font-size: 17px;
+  }
 </style>
