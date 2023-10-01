@@ -1,0 +1,56 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import { Image } from 'astro:assets'
+import berenice from '../../assets/landing_berenice_left.png'
+---
+
+<script>
+	document.getElementById('button')?.addEventListener('click', () => {
+		window.open('https://chat.whatsapp.com/JOnZoxuheDF0xGiih6uhDj', '_blank')
+	})
+</script>
+
+<Layout title="Gracias">
+	<main class="container mx-auto mt-12">
+		<section class="grid md:grid-cols-3">
+			<div>
+				<Image src={berenice} alt="Berenice" class="scale-x-[-1]" />
+			</div>
+
+			<div class="col-span-2">
+				<h1 class="text-center text-xl text-pink-400 md:text-4xl">
+					¡Felicidades tu registro esta casi listo!
+				</h1>
+				<p class="mt-2 text-center md:text-xl">
+					Para finalmente <strong>COMPLETAR</strong> tu <strong>REGISTRO</strong>
+				</p>
+				<p class="text-center md:text-xl">
+					faltan <srong>DOS PASOS</srong> muy pequeños e
+				</p>
+				<p class="text-center md:text-xl"><strong>IMPORTANTES</strong></p>
+				<ul class="mt-6 flex flex-col gap-4 md:mx-10">
+					<li>
+						1.- Ir a tu <strong>BANDEJA</strong> de <strong>CORREO</strong> con el cual te
+						registraste a esta SEMANA del <strong>TALLER</strong> y busca el <strong>CORREO</strong>
+						 con el <strong>TÍTULO: [IMPORTANTE] tu cupo esta confirmado.</strong>
+					</li>
+					<li>
+						2.- <strong>UNIRTE</strong> al <strong>GRUPO PRIVADO</strong> en <strong
+							>WhatsApp</strong
+						> para recibir todas las <strong>NOTIFICACIONES</strong> del evento y que te pierdas de
+						nada.
+					</li>
+				</ul>
+				<div class="flex flex-col items-center py-4">
+					<button
+						id="button"
+						class="rounded-lg bg-pink-600 px-4 py-2 text-lg font-semibold text-white"
+					>
+						Da click en el botón y ve al grupo
+					</button>
+					<p class="mt-2 text-xs">Da click en el botón para registrarte</p>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>

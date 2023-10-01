@@ -1,0 +1,105 @@
+---
+import Layout from '../../layouts/Layout.astro'
+---
+
+<Layout title="Registro al evento">
+	<main class="container mx-auto mt-8">
+		<form
+			action="https://api.smtprelay.co/contact/add?version=2"
+			data-id="bSlOHqpMec"
+			method="post"
+			id="ewf_subscriptionForm_bSlOHqpMec"
+			class="flex h-full flex-col items-center justify-center"
+		>
+			<div class="headers" style="">
+				<h4 id="ewf_formheader" class="text-2xl font-semibold text-pink-700" style="">
+					Registrate a la Masterclass
+				</h4>
+			</div>
+			<fieldset style="border:none;" class="webform-custominputs">
+				<div class="mt-4">
+					<div class="flex flex-col gap-2">
+						<label for="email" class="requiredInput">Email</label>
+						<input
+							maxlength="81"
+							class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+							name="email"
+							size="20"
+							type="email"
+							required=""
+							placeholder="Tu correo electronico"
+						/>
+					</div>
+					<div class="mt-4">
+						<label for="field_firstname">Nombre</label>
+						<input
+							maxlength="100"
+							class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+							name="field_firstname"
+							size="20"
+							type="text"
+							placeholder="Nombre"
+						/>
+					</div>
+				</div>
+				<div class="checkboxes"></div>
+				<div class="webform-lists" style="display: none;">
+					<div
+						style="display:flex;"
+						class="checkboxes js-Registrados a masterclass prueba (1 de Octubre)"
+					>
+						<label class="container-box">
+							<input
+								type="checkbox"
+								name="publiclistid"
+								id="bOgkiqbk"
+								value="137c1b24-e4de-4092-bedb-251965d5864c"
+								checked="checked"
+							/>
+						</label>
+						<label class="publiclistlabel" for="bOgkiqbk"
+							>Registrados a masterclass prueba (1 de Octubre)
+						</label>
+					</div>
+				</div>
+				<div class="consent"></div>
+				<p id="ewf_datadisclaimer"></p>
+			</fieldset>
+			<fieldset class="mt-8" style="border:none;">
+				<input
+					type="submit"
+					name="submit"
+					value="¡Quiero Registrarme al evento!"
+					id="eesubmit"
+					class="mb-2 mr-2 rounded-full bg-pink-700 px-5 py-2.5 text-center text-lg font-medium text-white hover:bg-pink-800 focus:outline-none focus:ring-4 focus:ring-pink-300 dark:bg-pink-600 dark:hover:bg-pink-700 dark:focus:ring-pink-800"
+				/>
+
+				<input type="hidden" name="publicaccountid" value="9377d1ed-c310-4467-b52c-bee4e5379dcb" />
+				<input type="hidden" name="returnUrl" value="www.gestionatupsicologia.com/evento/gracias" />
+				<input
+					type="hidden"
+					name="activationReturnUrl"
+					value="www.gestionatupsicologia.com/evento/gracias"
+				/>
+				<input
+					type="hidden"
+					name="alreadyactiveurl"
+					value="https://www.gestionatupsicologia.com/evento/gracias"
+				/>
+				<input type="hidden" name="activationTemplate" value="" />
+				<input type="hidden" name="source" value="WebForm" />
+				<input type="hidden" name="verifyemail" value="false" id="ewf_verifyEmails" />
+				<input type="hidden" id="ewf_captcha" name="captcha" value="false" />
+				<input type="hidden" name="sendActivation" value="false" />
+				<input type="hidden" name="notifyEmail" value="" />
+				<button
+					type="button"
+					name="dismissForm"
+					id="ewf_dismissForm"
+					style="display:none; position: absolute; top: 0; right: 0; float: right"
+					>X
+				</button>
+			</fieldset>
+		</form>
+	</main>
+</Layout>
