@@ -1,0 +1,159 @@
+---
+import LinkButton from '../../components/LinkButton.astro'
+import Layout from '../../layouts/Layout.astro'
+import { event } from '../../utils/contants'
+import { Image } from 'astro:assets'
+import imagenes from '../../assets/imagenes.png'
+import berenice from '../../assets/berenice_portrait.png'
+---
+
+<Layout title="MasterClass">
+	<main>
+		<section class="container mx-auto pt-4">
+			<h1 class="pb-4 text-center text-xl font-bold md:text-3xl">
+				¿QUÉ PASARÍA SI TODO LO QUE NOS HAN DICHO SOBRE BAJAR DE PESO FUERA UNA GRAN MENTIRA?
+			</h1>
+			<div class="flex">
+				<div>
+					<Image
+						src={berenice}
+						alt="berenice"
+						height={berenice.height}
+						width={berenice.width}
+						class="hidden md:flex"
+						loading="lazy"
+					/>
+				</div>
+				<div class="mx-4 flex w-full flex-col justify-around md:mx-0">
+					<h1 class="py-4 text-center text-xl text-pink-500 md:py-0 md:text-4xl">
+						¡Masterclass Gratuita!
+					</h1>
+					<h2 class="py-2 text-xl font-bold md:text-4xl">
+						CREA AMOR PROPIO Y AUTOESTIMA INQUEBRANTABLE
+					</h2>
+					<h2 class="text-xl md:text-2xl">Rompiendo Con Las 3 Mentiras Comunes Que Sabotean</h2>
+					<h1 class="text-xl font-semibold">Tus Intenciones De Bajar De Peso</h1>
+					<LinkButton />
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-pink-400 p-4">
+			<divc class="mx-auto grid grid-cols-2 place-items-center items-center">
+				<div class="flex items-center gap-4">
+					<img
+						src="boleto.webp"
+						alt="boleto"
+						height="128"
+						width="128"
+						class="h-16 w-16 rounded-full"
+					/>
+					<div>
+						<p class="text text-white">Reserva tu lugar</p>
+						<p class="text-sm text-white">Octubre 2023</p>
+					</div>
+				</div>
+				<div class="flex items-center gap-4">
+					<img src="anfritrion_small.webp" alt="anfritrion" class="h-16 w-16 rounded-full" />
+					<div>
+						<p class="text-white">Psicóloga Berenice Bastidas</p>
+						<p class="text-xs text-white">Anfitrión del evento</p>
+					</div>
+				</div>
+			</divc>
+		</section>
+
+		<section class="container px-4 py-2">
+			<h1 class="my-2 text-center text-2xl font-semibold md:text-4xl">
+				Lo Que Aprenderás En Este Exclusivo Evento
+			</h1>
+			<div class="mx-4 grid py-4 md:grid-cols-3 md:gap-12">
+				{
+					event.map((item) => (
+						<div class="flex flex-col items-center gap-4 py-4 md:py-0">
+							<Image
+								src={item.image}
+								alt={item.id.toString()}
+								height={item.image.width}
+								width={item.image.height}
+								class="md:h-56"
+								loading="lazy"
+							/>
+							<hr class="w-200 my-6 w-3/4 border-t-2 border-pink-500" />
+							<div>
+								<p class="text-center text-lg text-pink-500">{item.description}</p>
+								<p class="mt-2 text-center">{item.description}</p>
+							</div>
+						</div>
+					))
+				}
+			</div>
+		</section>
+
+		<section>
+			<div class="bg-pink-400 p-8">
+				<h1 class="text-center text-4xl font-bold tracking-wider text-white">
+					¿POR QUÉ TE PUEDO AYUDAR?
+				</h1>
+			</div>
+			<div class="container mx-auto grid px-4 md:grid-cols-3 md:items-center md:px-0">
+				<div class="col-span-2 leading-6">
+					<h2 class="text-center text-3xl font-semibold">Psicóloga Berenice Bastidas</h2>
+					<hr class="md:w-200 my-2 w-full border-t-2 border-pink-500" />
+					<p>
+						Exitosa, te entiendo, estar en un lugar así no es raro, es bastante común. Se vuelve el
+						“normal” y decimos cosas como “me tengo que amar incondicionalmente” aún si tu cuerpo no
+						cumple tus estándares.
+					</p>
+					<p>
+						Conozco ese lugar íntimamente. Yo solía ser esa persona y sufría en silencio, deseaba en
+						silencio, trataba de aceptarme sin éxito en silencio.
+					</p>
+					<p>
+						Hasta que un día me harté de meditar todos los días 20 min, de ir con mi terapeuta y
+						contarle todos mis problemas y traumas, de buscar atajos para tener un cuerpazo, y más
+						que nada de verme haciendo muchas cosas con pocos resultados, ni al nivel que yo quería.
+					</p>
+					<p>
+						Descubrí las 3 mentiras que estaba creyendo, que me mantenían gorda, en una talla que no
+						me gustaba y en un constante estado de escasez mental.
+					</p>
+					<p>
+						Hoy quiero compartirlo contigo, si ya intentaste dietas, ejercicios, cirugías
+						bariátricas, cirugías plásticas y sientes que nada te funciona puedo ayudarte a que
+						vivas esta transformación. ¡Es completamente posible para ti!
+					</p>
+					<p>
+						Lo sé con convicción esta es mi foto soy yo, y si lo he hecho posible para mí, créeme
+						puedo hacerlo posible para ti también.
+					</p>
+				</div>
+				<div class="flex md:justify-end">
+					<Image src={imagenes} alt="imagees" height="300" width="400" loading="lazy" />
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="bg-pink-400 p-8">
+				<h2 class="text-center text-2xl tracking-wider text-white md:text-4xl">
+					¿Hiciste dietas, ejercicios, cirugías bariátricas, cirugías plásticas y volviste a subir?
+				</h2>
+				<h1 class="text-center text-2xl font-bold tracking-wider text-white md:text-4xl">
+					LO QUE SUBISTE DE PESO EN EL PASADO, SE BAJA HOY EN EL PRESENTE...
+				</h1>
+				<p class="mt-6 text-center text-white">¡Esta masterclass Gratuito Si Es Para Ti!</p>
+			</div>
+			<div class="container mt-16 px-4 md:mx-20 md:px-0">
+				<h1 class="text-center text-2xl font-semibold md:text-4xl">
+					Rompiendo Con Las 3 Mentiras Comunes
+				</h1>
+				<h1 class="text-center text-2xl font-semibold md:text-4xl">
+					Que Sabotean Tus Intenciones De Bajar De Peso
+				</h1>
+			</div>
+			<LinkButton />
+			<p class="text-center text-xl">Voy a compartir contigo todas las herramientas que utilicé</p>
+			<p class="text-center text-xl">para llevar mi vida a otro nivel de éxito rápidamente.</p>
+		</section>
+	</main>
+</Layout>
